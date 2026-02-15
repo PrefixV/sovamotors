@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Jost-Bold";
+  src: url("/fonts/Jost-Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Jost-Medium";
+  src: url("/fonts/Jost-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Jost-Regular";
+  src: url("/fonts/Jost-Regular.ttf");
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+body, html {
+  height: 100%;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.video-background video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+:root {
+  --text-big: 28px;
+  --text-medium: 24px;
+  --text-small: 16px;
+  --text-main: white;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.319);
+  backdrop-filter: blur(20px);
+  padding: 15px 100px;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-family: "Jost-Regular";
+}
+header nav ul li {
+  text-decoration: none;
+  color: var(--text-main);
+  font-family: "Jost-Regular";
+}
+header .logo__wrapper h1 a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-family: "Jost-Medium";
+  font-size: var(--text-medium);
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

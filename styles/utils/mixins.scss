@@ -1,0 +1,17 @@
+@mixin font-small {
+    text-decoration: none;
+    color: var(--text-main);
+    font-family: "Jost-Regular";
+}
+
+@mixin font-medium {
+    text-decoration: none;
+    color: var(--text-main);
+    font-family: "Jost-Medium";
+}
+
+@mixin flex-center-center-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

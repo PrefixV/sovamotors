@@ -1,0 +1,34 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.319);
+    backdrop-filter: blur(20px);
+    padding: 15px 100px;
+
+    nav {
+     ul {
+        @include flex-center-center-row;
+        gap: 30px;
+        list-style: none;
+
+        li {
+            a {
+                @include font-small;
+            }
+            @include font-small;
+        }
+     }
+    }
+
+    .logo__wrapper {
+        h1 {
+            a {
+                @include font-medium;
+                font-size: var(--text-medium);
+                text-decoration: none;
+            }
+        }
+    }
+}
