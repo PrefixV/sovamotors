@@ -1,9 +1,9 @@
-header {
+.header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.319);
+    background-color: rgba(188, 188, 188, 0.122);
     backdrop-filter: blur(20px);
     padding: 15px 100px;
 
@@ -15,8 +15,44 @@ header {
 
         li {
             a {
-                @include font-small;
-            }
+  @include font-small;
+  position: relative;  
+  text-decoration: none;  
+  color: var(--text-main);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;  
+  }
+
+  &::before {
+    height: 0;
+    background-color: transparent;
+    transition: height 0.3s ease;
+  }
+
+  &::after {
+    height: 2px;
+    background-color: var(--text-main);  
+    transition: width 0.3s ease;
+    width: 0%;  
+  }
+
+  &:hover {
+    &::before {
+      height: 100%; 
+      background-color: rgba(var(--text-main-rgb), 0.1);  
+    }
+
+    &::after {
+      width: 100%;  
+    }
+  }
+}
             @include font-small;
         }
      }
@@ -29,6 +65,18 @@ header {
                 font-size: var(--text-medium);
                 text-decoration: none;
             }
+        }
+    }
+
+    .nav__mobile__button {
+        display: none;
+        background-color: transparent;
+        border-radius: var(--border-radius);
+        border: none;
+        cursor: pointer;
+
+        svg {
+            fill: var(--text-main);
         }
     }
 }
