@@ -3,9 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(188, 188, 188, 0.122);
-    backdrop-filter: blur(20px);
+    @include background-glass;
+    z-index: 1000;
     padding: 15px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     nav {
      ul {
@@ -14,8 +17,12 @@
         list-style: none;
 
         li {
+          font-size: var(--text-small);
+          position: relative;  
+          text-decoration: none;  
+          color: var(--text-main);
             a {
-  @include font-small;
+  font-size: var(--text-small);
   position: relative;  
   text-decoration: none;  
   color: var(--text-main);
@@ -53,7 +60,6 @@
     }
   }
 }
-            @include font-small;
         }
      }
     }
@@ -61,9 +67,9 @@
     .logo__wrapper {
         h1 {
             a {
-                @include font-medium;
-                font-size: var(--text-medium);
+                font-size: var(--text-big);
                 text-decoration: none;
+                color: var(--text-main);
             }
         }
     }

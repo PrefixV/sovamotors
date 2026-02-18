@@ -1,4 +1,2 @@
-@import './utils/fonts.scss', './utils/globals.scss', './utils/variables.scss', './utils/mixins.scss';
-@import './blocks/header.scss', './blocks/footer.scss', './utils/media.scss';
-
-
+@import './utils/variables.scss', './utils/mixins.scss', './utils/globals.scss';
+@import './blocks/header.scss', './blocks/footer.scss', './blocks/pageTopContainer.scss', './blocks/service.scss', './blocks/accordion.scss', './blocks/socials.scss' ,'./utils/media.scss';

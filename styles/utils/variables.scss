@@ -1,7 +1,13 @@
 :root {
+    --text-headlines: 55px;
+    --text-container-titles: 45px;
     --text-big: 28px;
     --text-medium: 24px;
-    --text-small: 16px;
-    --text-main: white;
-    --border-radius: 10px;
+    --border: 2px solid white;
+    --text-small: 18px;
+    --text-main: rgb(0, 0, 0);
+    --text-secondary: #FFFFFF;
+    --border-radius: 16px;
+    --text-mobile-big: 40px;
+    --accent:rgb(35, 39, 47);
 }
