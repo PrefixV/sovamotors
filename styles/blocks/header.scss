@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     @include background-glass;
-    z-index: 1000;
+    z-index: 800;
     padding: 15px 100px;
     position: fixed;
     top: 0;
@@ -20,12 +20,13 @@
           font-size: var(--text-small);
           position: relative;  
           text-decoration: none;  
-          color: var(--text-main);
+          color: var(--text-secondary);
             a {
-  font-size: var(--text-small);
-  position: relative;  
-  text-decoration: none;  
-  color: var(--text-main);
+            font-size: var(--text-small);
+            position: relative;  
+            text-decoration: none;  
+            color: var(--text-secondary);
+            letter-spacing: 1px;
 
   &::before,
   &::after {
@@ -44,7 +45,7 @@
 
   &::after {
     height: 2px;
-    background-color: var(--text-main);  
+    background-color: var(--text-secondary);  
     transition: width 0.3s ease;
     width: 0%;  
   }
@@ -52,7 +53,7 @@
   &:hover {
     &::before {
       height: 100%; 
-      background-color: rgba(var(--text-main-rgb), 0.1);  
+      background-color: rgba(var(--text-main), 0.1);  
     }
 
     &::after {
@@ -69,7 +70,7 @@
             a {
                 font-size: var(--text-big);
                 text-decoration: none;
-                color: var(--text-main);
+                color: var(--text-secondary);
             }
         }
     }
@@ -82,7 +83,69 @@
         cursor: pointer;
 
         svg {
-            fill: var(--text-main);
+            fill: white;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .header {
+        justify-content: space-between;
+        padding: 10px 45px;
+        transition: 0.2s height ease, 0.2s visibility ease, 0.2s width ease;
+
+        nav {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.2s ease 0.1s;
+        }
+
+        .nav__mobile__button {
+            display: block;
+        }
+    }
+
+    .header__mobile__active {
+         @include flex-center-center-row;
+        flex-direction: column;
+        height: 100vh;
+        gap: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1001;
+        padding: 20px;
+        opacity: 1;
+        pointer-events: all; 
+        transition: opacity 0.2s ease, height 0.2s ease;
+
+        .logo__wrapper {
+            h1 {
+                a {
+                    font-size: var(--text-big);
+                }
+            }
+        }
+
+        nav {
+            @include flex-center-center-row;
+            flex-direction: column;
+            visibility: visible;
+            height: max-content;
+            width: 100%;
+            gap: 20px;
+            opacity: 1;
+
+             ul {
+                flex-direction: column;
+                li {
+                     font-size: var(--text-medium);
+                    a {
+                        font-size: var(--text-medium);
+                    }
+                }
+             }
         }
     }
 }

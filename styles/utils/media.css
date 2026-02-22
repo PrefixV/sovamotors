@@ -1,11 +1,1 @@
-@media screen and (max-width: 430px) {
-  .header {
-    padding: 20px 50px;
-  }
-  .header nav {
-    display: none;
-  }
-  .header .nav__mobile__button {
-    display: block;
-  }
-}/*# sourceMappingURL=media.css.map */
+/*# sourceMappingURL=media.css.map */

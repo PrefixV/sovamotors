@@ -1,0 +1,123 @@
+footer {
+    width: 100%;
+    padding: 60px 40px 30px;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ===== HEADER ===== */
+
+.footer__header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .footer__links__wrapper {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+    }
+}
+
+/* ===== DIVIDER ===== */
+
+.footer__body__container {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+}
+
+/* ===== INFO ===== */
+
+.footer__information__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+
+    .footer__owner__information {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        p:first-child {
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__header__container,
+    .footer__information__container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 430px) {
+
+    footer {
+        padding: 40px 20px 25px;
+        gap: 30px;
+    }
+
+    /* ===== HEADER ===== */
+
+    .footer__header__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+
+    .footer__links__wrapper {
+        flex-direction: column;
+        gap: 12px;
+
+        a {
+            font-size: 14px;
+        }
+    }
+
+    /* ===== INFO ===== */
+
+    .footer__information__container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .footer__owner__information {
+        gap: 4px;
+    }
+}

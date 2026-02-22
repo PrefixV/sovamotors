@@ -31,20 +31,20 @@
 }
 
 @mixin background-glass {
-    background-color: rgba(255, 255, 255, 0.413);
+    background-color: rgba(0, 0, 0, 0.463);
     backdrop-filter: blur(20px);
 }
 
 @mixin button {
     width: 180px;
-    height: 60px;
+    height: 50px;
     font-size: var(--text-small);
     color: var(--text-secondary);
     border-radius: var(--border-radius);
     border: none;
     cursor: pointer;
     border: 2px solid transparent;
-    background-color: black;
+    background-color: var(--accent);
 
     &:hover {
         transform: translateY(-4px);
