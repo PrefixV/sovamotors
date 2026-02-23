@@ -1,26 +1,130 @@
-header {
+.header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.319);
+  padding: 18px 100px;
+  backdrop-filter: blur(12px);
+  background: rgba(15, 15, 15, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  /* ===== shrink on scroll ===== */
+}
+.header.scrolled {
+  padding: 12px 80px;
   backdrop-filter: blur(20px);
-  padding: 15px 50px;
 }
-header nav ul {
+.header {
+  /* ================= LOGO ================= */
+}
+.header .logo__wrapper h1 a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.header {
+  /* ================= NAV ================= */
+}
+.header nav ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+  gap: 35px;
   list-style: none;
+  align-items: center;
 }
-header nav ul li a {
+.header nav ul li a {
+  position: relative;
   text-decoration: none;
-  color: var(--text-main);
-  font-family: "Jost-Regular";
+  color: var(--text-secondary);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
-header nav ul li {
-  text-decoration: none;
+.header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.header nav ul li a:hover {
   color: var(--text-main);
-  font-family: "Jost-Regular";
+}
+.header nav ul li a:hover::after {
+  width: 100%;
+}
+.header nav ul li a.active {
+  color: var(--text-main);
+}
+.header nav ul li a.active::after {
+  width: 100%;
+}
+.header nav ul {
+  /* ===== CTA button ===== */
+}
+.header nav ul .nav__cta a {
+  padding: 8px 18px;
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.header nav ul .nav__cta a::after {
+  display: none;
+}
+.header nav ul .nav__cta a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.header {
+  /* ================= MOBILE BUTTON ================= */
+}
+.header .nav__mobile__button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .header {
+    padding: 15px 25px;
+  }
+  .header .nav__mobile__button {
+    display: block;
+  }
+  .header nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.98);
+    backdrop-filter: blur(15px);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .header nav ul {
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 25px;
+  }
+  .header nav ul li a {
+    font-size: 18px;
+  }
+}
+.header__mobile__active nav {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
 }/*# sourceMappingURL=header.css.map */
